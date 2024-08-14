@@ -5,41 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra - Inicio</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css">
-    <style>
-        /* Estilos personalizados */
-        body {
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-        }
-        .main-content {
-            max-width: 60%;
-            margin: 50px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .carousel-inner img {
-            height: 400px; /* Altura fija */
-            object-fit: cover; /* Recorta la imagen para que encaje en el contenedor */
-            border-radius: 8px;
-        }
-        h1 {
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .btn-lg {
-            width: 100%;
-            margin-bottom: 10px;
-        }
-        @media (min-width: 768px) {
-            .btn-lg {
-                width: auto;
-                margin-right: 10px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Enlace al archivo styles.css -->
 </head>
 <body>
     <!-- Navbar -->
