@@ -3,6 +3,12 @@ body {
     background-color: #7e7d7db6;
     font-family: Arial, sans-serif;
 }
+.bodylogin {
+   
+    background-image: url("../images/fondologin.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
 
 .main-content {
     max-width: 60%;
