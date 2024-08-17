@@ -5,55 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra - Inicio</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css"> <!-- Enlace al archivo styles.css -->
+    <link rel="stylesheet" href="../assets/css/style.css"> 
 </head>
 <body>
     <!-- Navbar -->
-    <?php include '../includes/navbar.php'; ?>
+    <?php include "../includes/navbar.php"?>
 
     <!-- Contenido Principal -->
-    <div class="container mt-4">
+    <div class="container-fluid">
         <div class="row">
-            <!-- Carrusel -->
-            <div class="col-lg-8 col-md-12 mb-4">
-                <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="../assets/images/airelibreweb.jpg" class="d-block w-100" alt="Deporte al aire libre 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../assets/images/carrusel2.jpg" class="d-block w-100" alt="Deporte al aire libre 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../assets/images/carrusel3.jpg" class="d-block w-100" alt="Deporte al aire libre 3">
+            <div class="col-lg-6 col-sm-6 d-flex flex-column ">
+                <br><br>
+                <h1 class="al text-center">CARRITO DE COMPRA</h1>
+                <br>
+                <h6 class="al text-center text-muted">Bienvenido a Carrito de Compra, el lugar donde encontrar todo tipo de artículos para deportes al aire libre</h6>
+                <br><br>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-6 col-sm-6 col-6 text-center">
+                                <button type="button" class="btn btn-secondary btn-custom">  <a href="login.php" class="link-1" >Iniciar Sesion</a> </button>
+                            </div>
+                            <br>
+                            <div class="col-lg-6 col-sm-6 col-6 text-center">
+                                <button type="button" class="btn btn-secondary btn-custom">Registrarse </button>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 col-12 text-center">
+                                <br>
+                                <button type="button" class="btn btn-outline-dark">Continuar como invitado</button>
+                            </div>
+                            <div class="col-lg-12 col-sm-12 col-12">
+                                <br><br>
+                                <h4 class="text-muted"> ¡Bienvenido a Carrito de Compra!<br>       Tu destino número uno para equiparte y disfrutar del deporte al aire libre.</h4>
+                                <p>En Carrito de Compra, nos apasiona la vida activa y al aire libre. Entendemos que cada aventura, desde una caminata tranquila en el parque hasta una intensa sesión de entrenamiento, requiere el equipo adecuado para sacar lo mejor de ti. Es por eso que nos dedicamos a ofrecerte una amplia variedad de productos de alta calidad, diseñados para mejorar tu experiencia y ayudarte a alcanzar tus metas.</p>
+                            </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Siguiente</span>
-                    </button>
                 </div>
-            </div>
-
-            <!-- Opciones de acceso -->
-            <div class="col-lg-4 col-md-12 text-center">
-                <h1>Bienvenidos a Carrito de Compra</h1>
-                <p>Compra todo lo que necesitas para hacer deporte al aire libre.</p>
-                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                    <a href="login.php" class="btn btn-primary btn-lg mb-2 mb-md-0">Iniciar Sesión</a>
-                    <a href="register.php" class="btn btn-outline-primary btn-lg mb-2 mb-md-0">Registrarse</a>
-                    <a href="invitado.php" class="btn btn-secondary btn-lg">Entrar como Invitado</a>
+                <div id="carouselExample" class="col-lg-6 col-sm-6 col-6 p-0 carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="../assets/images/pelocesped.jpg" alt="Pelota en césped" class="img-fluid custom-height">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../assets/images/aire.jpg" alt="Pelota en césped" class="img-fluid custom-height">
+                        </div>
+                    </div>
                 </div>
+                <?php include "../includes/footer.php"?>
             </div>
         </div>
-    </div>
-
-    <!-- Footer -->
-    <?php include '../includes/footer.php'; ?>
-
     <script src="../bootstrap/js/bootstrap.bundle.js"></script>
 </body>
 </html>
