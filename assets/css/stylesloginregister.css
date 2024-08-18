@@ -1,0 +1,23 @@
+body {
+    background-image: url('../images/8972107.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 1;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Hereda el background del body */
+    filter: brightness(80%); /* Reduce el brillo */
+    z-index: -1; /* Envía este pseudo-elemento detrás del contenido del body */
+    background-attachment: fixed; /* Mantiene el background fijo */
+}
+

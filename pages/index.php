@@ -27,7 +27,7 @@
                             </div>
                             <br>
                             <div class="col-lg-6 col-sm-6 col-6 text-center">
-                                <button type="button" class="btn btn-secondary btn-custom">Registrarse </button>
+                                <button type="button" class="btn btn-secondary btn-custom"> <a href="register.php" class="link-1" >Registrarse</a> </button>
                             </div>
                             <div class="col-lg-12 col-sm-12 col-12 text-center">
                                 <br>
@@ -41,6 +41,7 @@
                         </div>
                     </div>
                 </div>
+                
                 <div id="carouselExample" class="col-lg-6 col-sm-6 col-6 p-0 carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">

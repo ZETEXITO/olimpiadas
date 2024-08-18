@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="../assets/css/style.css"> 
+<div class="card-footer">
 <footer class="text-white py-4">
-    <div class="container text-center">
+    <div class="container text-center ">
         <!-- Sección de enlaces -->
         <div class="row mb-3">
             <div class="col-md-4">
@@ -18,5 +19,6 @@
             <p class="mb-0">&copy; 2024 Carrito de Compra. Todos los derechos reservados.</p>
         </div>
     </div>
+    
 </footer>
 
