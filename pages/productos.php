@@ -8,12 +8,15 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-if (isset($_SESSION["Ingresado"])) {
-    $ImagenU = 0;
-    $query = mysqli_query($conn,"SELECT Imagen, Admin FROM usuarios WHERE ID_Usuario = ".$_SESSION["IdUsuario"]."") or die (mysqli_error($conn));
-    while($row= mysqli_fetch_array($query)){
+if (isset($_SESSION["IdUsuario"])){
+    $id=$_SESSION["IdUsuario"];
+}
+if (isset($_SESSION["registrado"])) {
+    $ImagenU = "";
+    $query5 = mysqli_query($conn, "SELECT Imagen, Admin FROM usuarios WHERE ID_Usuario = ". $id ."") or die (mysqli_error($conn));
+    while($row= mysqli_fetch_array($query5)){
         $ImagenU = $row['Imagen'];
-        if($row['Admin'] === TRUE){
+        if($row['Admin'] != 0){
             $_SESSION["Admin"] = 1;
         }
     }
@@ -32,18 +35,18 @@ $_SESSION["stock"] = $stock;
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css"> 
     <script defer src="../bootstrap/js/bootstrap.bundle.js"></script>
-    <script defer src="../bootstrap/js/Main.js"></script>
+    <script defer src="../assets/js/Main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra</title>
 </head>
 <body>
-    <?php if (isset($_SESSION["Ingresado"])){
+    <?php if (isset($_SESSION["registrado"])){
         include "../includes/navbar-ingresado.php";
     }else{
         include "../includes/navbar.php";
     }
-    if ($_SESSION["Admin"] != 0){
-        echo "<br><br><div class='col-12 text-center'><button type='button' class='btn btn-secondary btn-custom-ingresado'>Ingresár Producto</button></div><br><br>";
+    if (isset($_SESSION["Admin"]) && $_SESSION["Admin"] != 0){
+        echo "<br><br><div class='col-12 text-center'><button type='button' class='btn btn-secondary btn-custom-ingresado'>Ingresar Producto</button></div><br><br>";
     }
     ?>
     <div class="Container-Carrito"> 
@@ -64,19 +67,19 @@ $_SESSION["stock"] = $stock;
                                 if($stock != 0){
                                     while ($Repet < $stock){
                                         $Random = RandomIdStock( 1, $stock );
-                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Imagen_Producto, Nombre_Producto, Descripción, Valór_Producto FROM productos WHERE ID_Producto = $Random") or die (mysqli_error($conn));
+                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Imagen_Producto, Nombre_Producto, Descripcion, Valor_Producto FROM productos WHERE ID_Producto = ". $Random."") or die (mysqli_error($conn));
                                         while($row1= mysqli_fetch_array($query1)){
                                             $IDP = $row1['ID_Producto'];
                                             $NombreP = $row1['Nombre_Producto'];
                                             $ImagenP = $row1['Imagen_Producto'];
-                                            $DescP = $row1['Descripción'];
-                                            $ValórP = $row1['Valór_Producto'];
+                                            $DescP = $row1['Descripcion'];
+                                            $ValórP = $row1['Valor_Producto'];
                                         }
-                                        $ContRepet = $ContRepet + 1;
+                                        $ContRepet++;
                                         if ($ContRepet == 6) {
                                             $ContRepet = 0;
                                             echo "</div>
-                                                </div>
+                                                </div> 
                                             </div>
                                             <div class='carousel-item'>
                                                 <div class='col-12'>
@@ -89,7 +92,7 @@ $_SESSION["stock"] = $stock;
                                                     <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
                                                     <h7 class='Container-Carrito-Carrousel-List-Description'>$DescP</h7>
                                                     <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
-                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agragar al Carrito</button>
+                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agregar al Carrito</button>
                                                 </div>
                                             </div>";
                                         }
