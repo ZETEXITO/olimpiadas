@@ -30,29 +30,34 @@ $_SESSION["stock"] = $stock;
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css"> 
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
     <script defer src="../bootstrap/js/bootstrap.bundle.js"></script>
     <script defer src="../bootstrap/js/Main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra</title>
 </head>
 <body> 
-    <?php include "../includes/navbar-ingresado.php"?>
+<?php 
+    if (isset($_SESSION["registrado"])){
+        include "../includes/navbar-ingresado.php";
+    } else{
+        include "../includes/navbar.php";
+    }
+    ?>
     <br><br><br>
     <div class="col-12 banner">
     <div class="container">
         <div class="row">
             <div class="col-2 text-center"><a class="banner-links">Uniforme</a></div>
             <div class="col-2 text-center"><a class="banner-links">Pelotas</a></div>
-            <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
+            <div class="col-2 text-center"><a class="banner-links">Botines</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
         </div>
     </div>
     </div>
-    <b p-2r>
-    <img class="Img-Carrito p-2" src="../assets/images/airelibre1.jpg">
+
 
     <div class="Container-Carrito">
         <div id="carouselExampleIndicators" class="carousel slide Container-Carrito-Carrousel pt-3" data-bs-ride="carousel">

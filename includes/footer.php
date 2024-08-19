@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style.css"> 
+<link rel="stylesheet" href="../assets/css/styles.css"> 
 <footer class="text-white py-4">
     <div class="card-footer">
         <div class="container text-center">

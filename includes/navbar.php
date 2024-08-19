@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style.css"> 
+<link rel="stylesheet" href="../assets/css/styles.css"> 
 <nav class="navbar navbar-expand-lg navbar-dark Header">
     <div class="container-fluid">
         <a class="navbar-brand header-title" href="index.php">Carrito de Compra</a>
@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../pages/hola.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="../pages/carrito.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../pages/productos.php">Productos</a>
