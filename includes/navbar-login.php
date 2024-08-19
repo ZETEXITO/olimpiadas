@@ -17,7 +17,7 @@
                     <a class="nav-link" href="../pages/contacto.php">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/login.php">Iniciar Sesión</a>
+                    <a class="nav-link" href="../pages/register.php">Registrarse</a>
                 </li>
             </ul>
         </div>

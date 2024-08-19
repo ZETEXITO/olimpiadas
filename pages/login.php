@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compra - Ingreso</title>
+    <title>Carrito de Compra</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/stylesloginregister.css">
 </head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+<body class="d-flex justify-content-center align-items-center vh-100">
+    <?php include "../includes/navbar-login.php"?>
     <div class="container bg-dark text-light p-4 rounded shadow" style="max-width: 400px;">
         <div class="text-center mb-4">
             <img src="../assets/images/carrito.png" alt="Carrito" width="72" height="72">
@@ -25,10 +26,10 @@
             </div>
             <button type="submit" class="btn btn-dark w-100 mb-3">Ingresar</button>
             <div class="text-center">
-                <a href="registro.php" class="text-light">¿No tienes cuenta? ¡Regístrate aquí!</a>
+                <a href="register.php" class="text-light">¿No tienes cuenta? ¡Regístrate aquí!</a>
             </div>
         </form>
     </div>
-    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
