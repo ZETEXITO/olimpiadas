@@ -15,7 +15,7 @@
             <img src="../assets/images/carrito.png" alt="Carrito" width="72" height="72">
             <h1 class="h3 mb-4">Iniciar sesión</h1>
         </div>
-        <form action="">
+        <form action="../base_de_datos/chequeo_usuario.php" method = "POST">
             <div class="mb-3">
                 <label for="correo" class="form-label">Correo</label>
                 <input type="email" class="form-control bg-secondary text-light border-secondary" id="correo" name="correo" placeholder="Ingresa tu correo" required>

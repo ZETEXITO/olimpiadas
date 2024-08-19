@@ -16,7 +16,7 @@
             <img src="../assets/images/carrito.png" alt="Carrito" width="72" height="72">
             <h1 class="h3 mb-4">Registro</h1>
         </div>
-        <form action="">
+        <form action="../base_de_datos/subir_usuario.php" method="POST">
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <input type="text" class="form-control bg-secondary text-light border-secondary" id="nombre" name="nombre" placeholder="Ingresa tu nombre" required>

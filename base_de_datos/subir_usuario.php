@@ -10,9 +10,9 @@ if ($conn->connect_error) {
 }
 
 $Listo = $_POST["Listo"];
-$Nombre =""; 
-$Email = ""; 
-$Contra = "";
+$Nombre = $_POST["nombre"]; 
+$Email = $_POST["correo"]; 
+$Contra = $_POST["contraseña"];
 
 if(isset($Listo)){
     $sql = "INSERT INTO usuarios ( Nombre, Email, Contraseña) VALUES ('$Nombre', '$Email', '$Contra')";
