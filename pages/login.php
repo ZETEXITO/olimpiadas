@@ -1,3 +1,11 @@
+<?php 
+session_start();
+if (isset($_SESSION["Error"])) {
+    if($_SESSION["Error"] != 0){
+        include "../incudes/prompt.php";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

@@ -19,9 +19,9 @@ if(isset($Listo)){
 }
 
 if ($conn->query($sql) === TRUE){
-    $_SESSION["Registrado"]= 1 ;
-    $_SESSION["Volver"] = 0;
-    header("Location:Paginas/Index.php");
+    $_SESSION["registrado"]= 1 ;
+    $_SESSION["Error"] = 0;
+    header("Location:../pages/index.php");
     exit;
 } else{
     echo "Error al insetar registro: " . $conn->error;

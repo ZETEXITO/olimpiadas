@@ -15,8 +15,8 @@ $Contra=$_POST["contraseña"];
 if(isset($_POST["correo"])){
     $query = mysqli_query($conn, " SELECT * FROM usuarios where Email='".$Email."' AND Contraseña='".$Contra."' ") or die (mysqli_error($conn));
     if ($conn = mysqli_fetch_array($query)){
-        $_SESSION["Registrado"] = 1;
-        $_SESSION["Volver"]=0;
+        $_SESSION["registrado"] = 1;
+        $_SESSION["Error"] = 0;
         header("Location:../pages/index.php");
     } else{
         $_SESSION["Error"] = 1;

@@ -29,6 +29,13 @@
                             <a href="../pages/index.php" class="nav__link">Inicio</a>
                         </div>
                     </li>
+
+                    <li class="list__item">
+                        <div class="list__button">
+                            <img src="../assets/images/carrito.svg" alt="" class="list__img">
+                            <a href="../pages/productos.php" class="nav__link">Productos</a>
+                        </div>
+                    </li>
     
                     <li class="list__item">
                         <div class="list__button">

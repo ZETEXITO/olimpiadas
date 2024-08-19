@@ -32,9 +32,9 @@
                 </div>
                 <div class="mb-3">
                     <label for="confirmar-contraseña" class="form-label">Confirmar Contraseña</label>
-                    <input type="password" class="form-control bg-secondary text-light border-secondary" id="confirmar-contraseña" name="confirmar-contraseña" placeholder="Confirma tu contraseña" required>
+                    <input type="password" class="form-control bg-secondary text-light border-secondary" id="confirmar-contraseña" name="confirmar-contraseña" placeholder="Confirma tu contraseña">
                 </div>
-                <button type="submit" class="btn btn-dark w-100 mb-3">Registrar</button>
+                <button type="submit" name="Listo" class="btn btn-dark w-100 mb-3">Registrar</button>
                 <div class="text-center">
                     <a href="login.php" class="text-light">¿Ya tienes cuenta? ¡Inicia sesión aquí!</a>
                 </div>

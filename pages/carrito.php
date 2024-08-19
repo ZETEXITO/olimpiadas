@@ -9,11 +9,9 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 if (isset($_SESSION["Ingresado"])) {
-    $NombreU = 0;
     $ImagenU = 0;
-    $query = mysqli_query($conn,"SELECT Nombre, Imagen, Admin FROM usuarios WHERE ID_Usuario = ".$_SESSION["IdUsuario"]."") or die (mysqli_error($conn));
+    $query = mysqli_query($conn,"SELECT Imagen, Admin FROM usuarios WHERE ID_Usuario = ".$_SESSION["IdUsuario"]."") or die (mysqli_error($conn));
     while($row= mysqli_fetch_array($query)){
-        $NombreU = $row['Nombre'];
         $ImagenU = $row['Imagen'];
         if($row['Admin'] === TRUE){
             $_SESSION["Admin"] = 1;

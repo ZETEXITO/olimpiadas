@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,10 +9,17 @@
     <title>Carrito de Compra</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/style.css"> 
+    <script src="../assets/js/popus.js"></script>
 </head>
 <body>
     <!-- Navbar -->
-    <?php include "../includes/navbar.php"?>
+    <?php 
+    if (isset($_SESSION["registrado"])){
+        include "../includes/navbar-ingresado.php";
+    } else{
+        include "../includes/navbar.php";
+    }
+    ?>
 
     <!-- Contenido Principal -->
     <div class="container-fluid body-index">
@@ -23,18 +33,28 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-2"></div>
-                            <div class="col-4 text-center">
-                                <button type="button" class="btn btn-secondary btn-custom">  <a href="login.php" class="link-1" >Iniciar Sesion</a> </button>
+                            <?php 
+                            if (isset($_SESSION["registrado"])){
+                                echo "<div class='col-8 text-center'>
+                                    <button type='button' class='btn btn-secondary btn-custom-ingresado'><a href='../pages/carrito.php' class='link-1'>Ingresár</a></button>
+                                </div>
+                                <div class='col-2'></div>";
+                            }else{
+                                echo"<div class='col-4 text-center'>
+                                <button type='button' class='btn btn-secondary btn-custom'>  <a href='login.php' class='link-1' >Iniciar Sesion</a> </button>
                             </div>
                             <br>
-                            <div class="col-4 text-center">
-                                <button type="button" class="btn btn-secondary btn-custom"> <a href="register.php" class="link-1" >Registrarse</a> </button>
+                            <div class='col-4 text-center'>
+                                <button type='button' class='btn btn-secondary btn-custom'> <a href='register.php' class='link-1' >Registrarse</a> </button>
                             </div>
-                            <div class="col-2"></div>
-                            <div class="col-lg-12 col-sm-12 col-12 text-center">
+                            <div class='col-2'></div>
+                            <div class='col-lg-12 col-sm-12 col-12 text-center'>
                                 <br>
-                                <a href="../pages/carrito.php"><button type="button" class="btn btn-outline-dark">Continuar como invitado</button></a>
-                            </div>
+                                <a href='../pages/carrito.php'><button type='button' class='btn btn-outline-dark'>Continuar como invitado</button></a>
+                            </div>";
+                            }
+                                ?>
+                           
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <div class="container-index">
                                 <br><br>
