@@ -57,7 +57,12 @@ $_SESSION["stock"] = $stock;
         </div>
     </div>
     </div>
+<<<<<<< HEAD
 
+=======
+    <br>
+    <img class="Img-Carrito p-2" src="../assets/images/airelibre1.jpg">
+>>>>>>> 58fdd9be1fa14386a0ad7bf2d90a64be0abc021f
 
     <div class="Container-Carrito">
         <div id="carouselExampleIndicators" class="carousel slide Container-Carrito-Carrousel pt-3" data-bs-ride="carousel">
