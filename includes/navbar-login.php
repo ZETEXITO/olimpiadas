@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="../pages/hola.php">Inicio</a>
+                    <a class="nav-link active" aria-current="page" href="../pages/index.php">Inicio</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../pages/productos.php">Productos</a>
@@ -17,7 +17,7 @@
                     <a class="nav-link" href="../pages/contacto.php">Contacto</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../pages/login.php">Iniciar Sesión</a>
+                    <a class="nav-link" href="../pages/register.php">Registrarse</a>
                 </li>
             </ul>
         </div>
