@@ -159,16 +159,26 @@ footer {
 }
 .cont-menu{
     width: 100%;
-    max-width: 300px;
+    max-width: 100%;
     z-index: 1;
     background: none;
-    padding-right: 30px;
-    position: relative;
+    padding-right: 10%;
+    position: right;
     transition: all 300ms ease;
-    transform: translateY(-100%) translateX(400%);
+    transform: translateY(-100%) translateX(460%);
+}
+.p-index{
+    font-size: 91%;
+}
+.h4-index{
+    font-size: 105%;
+}
+.text-right{
+text-align: right;
+align-items: right;
 }
 #btn-menu:checked ~ .container-menu .cont-menu{
-    transform: translateY(5%) translateX(400%);
+    transform: translateY(5%) translateX(460%);
 }
 .cont-menu nav{
     padding-right: 35px; 

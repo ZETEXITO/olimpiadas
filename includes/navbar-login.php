@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="../assets/css/style.css"> 
+<link rel="stylesheet" href="../assets/css/styles.css"> 
 <nav class="navbar navbar-expand-lg navbar-dark Header">
     <div class="container-fluid">
         <a class="navbar-brand header-title" href="index.php">Carrito de Compra</a>
