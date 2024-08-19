@@ -30,7 +30,7 @@ $_SESSION["stock"] = $stock;
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/styles.css"> 
+    <link rel="stylesheet" href="../assets/css/style.css"> 
     <script defer src="../bootstrap/js/bootstrap.bundle.js"></script>
     <script defer src="../bootstrap/js/Main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -57,12 +57,8 @@ $_SESSION["stock"] = $stock;
         </div>
     </div>
     </div>
-<<<<<<< HEAD
 
-=======
-    <br>
-    <img class="Img-Carrito p-2" src="../assets/images/airelibre1.jpg">
->>>>>>> 58fdd9be1fa14386a0ad7bf2d90a64be0abc021f
+    <img class="Img-Carrito" src="../assets/images/promociones.jpg">
 
     <div class="Container-Carrito">
         <div id="carouselExampleIndicators" class="carousel slide Container-Carrito-Carrousel pt-3" data-bs-ride="carousel">
