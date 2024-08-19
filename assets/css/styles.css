@@ -10,6 +10,11 @@
 .header-title{
     padding-left: 30px;
 }
+h4{
+    width: 100%;
+    height: 100%;
+    font-size: 120%;
+}
 menu:hover{  
     cursor: pointer;
 }
@@ -80,13 +85,14 @@ footer {
     background-color: rgb(24, 24, 24);
     color: white;
     width: 100%;
+    height: 15%;
     text-align: center;
     font-size: 0.9em;
     position: fixed;
     bottom: 0;
 }
 .body-index{
-    padding-top: 63px;
+    padding-top: 3%;
 }
 
 /*Carrito*/
@@ -159,10 +165,10 @@ footer {
     padding-right: 30px;
     position: relative;
     transition: all 300ms ease;
-    transform: translateY(-100%) translateX(540%);
+    transform: translateY(-100%) translateX(400%);
 }
 #btn-menu:checked ~ .container-menu .cont-menu{
-    transform: translateY(5%) translateX(540%);
+    transform: translateY(5%) translateX(400%);
 }
 .cont-menu nav{
     padding-right: 35px; 
@@ -248,22 +254,22 @@ footer {
     min-height: 100vh;
 }
 .title-index{
-    font-size: 70px;
+    font-size: 250%;
 }
 .title-index-sub{
-    padding-left: 80px;
-    padding-right: 80px;
+    padding-left: 12%;
+    padding-right: 12%;
 }
 .container-index{
-    padding-left: 40px;
-    padding-top: 40px;
-    padding-right: 40px;
+    padding-left: 5%;
+    padding-top: 5%;
+    padding-right: 5%;
 }
 .btn-custom {
-    width: 250px; /* Ancho del botón */
-    height: 50px; /* Alto del botón */
+    width: 100%; /* Ancho del botón */
+    height: 110%; /* Alto del botón */
     padding: 8px 20px; /* Relleno interno del botón (arriba/abajo, izquierda/derecha) */
-    font-size: 19px; /* Tamaño de la fuente */
+    font-size: 110%; /* Tamaño de la fuente */
     border-radius: 10px; /* Bordes redondeados */
 }
 .btn-custom-ingresado {
