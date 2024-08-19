@@ -38,19 +38,19 @@ session_start();
                                 echo "<div class='col-8 text-center'>
                                     <button type='button' class='btn btn-secondary btn-custom-ingresado'><a href='../pages/carrito.php' class='link-1'>Ingresár</a></button>
                                 </div>
-                                <div class='col-2'></div>";
+                                <div class='col-md-4 col-lg-4'></div>";
                             }else{
-                                echo"<div class='col-4 text-center'>
+                                echo"<div class='col-md-4 col-lg-4 text-center'>
                                 <button type='button' class='btn btn-secondary btn-custom'>  <a href='login.php' class='link-1' >Iniciar Sesion</a> </button>
                             </div>
                             <br>
-                            <div class='col-4 text-center'>
+                            <div class='col-md-4 col-lg-4 text-center'>
                                 <button type='button' class='btn btn-secondary btn-custom'> <a href='register.php' class='link-1' >Registrarse</a> </button>
                             </div>
-                            <div class='col-2'></div>
+                            <div class='col-md-2 col-lg-2'></div>
                             <div class='col-lg-12 col-sm-12 col-12 text-center'>
                                 <br>
-                                <a href='../pages/carrito.php'><button type='button' class='btn btn-outline-dark'>Continuar como invitado</button></a>
+                                <a href='../pages/carrito.php'><button type='button' class='btn btn-outline-dark btn-custom-invitado'>Continuar como invitado</button></a>
                             </div>";
                             }
                                 ?>

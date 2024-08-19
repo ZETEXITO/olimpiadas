@@ -266,6 +266,13 @@ footer {
     font-size: 19px; /* Tamaño de la fuente */
     border-radius: 10px; /* Bordes redondeados */
 }
+.btn-custom-invitado {
+    width: 500px; /* Ancho del botón */
+    height: 50px; /* Alto del botón */
+    padding: 8px 20px; /* Relleno interno del botón (arriba/abajo, izquierda/derecha) */
+    font-size: 19px; /* Tamaño de la fuente */
+    border-radius: 10px; /* Bordes redondeados */
+}
 .btn-custom-ingresado {
     width: 500px; /* Ancho del botón */
     height: 50px; /* Alto del botón */
