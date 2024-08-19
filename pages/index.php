@@ -8,7 +8,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra</title>
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css"> 
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
     <script src="../assets/js/popus.js"></script>
 </head>
 <body>
@@ -25,17 +25,17 @@ session_start();
     <div class="container-fluid body-index">
         <div class="row">
             <div class="col-lg-6 col-sm-6 d-flex flex-column ">
-                <br><br>
-                <h1 class="al text-center title-index">CARRITO DE COMPRA</h1>
                 <br>
-                <h6 class="al text-center text-muted title-index-sub">Bienvenido a Carrito de Compra, el lugar donde encontrar todo tipo de artículos para deportes al aire libre</h6>
-                <br><br>
+                <h2 class="text-center title-index">CARRITO DE COMPRA</h1>
+                <br>
+                <h6 class="text-center text-muted title-index-sub">Bienvenido a Carrito de Compra, el lugar donde encontrar todo tipo de artículos para deportes al aire libre</h6>
+                
                     <div class="container">
                         <div class="row">
-                            <div class="col-2"></div>
+                            <div class="col-2 col-lg-2"></div>
                             <?php 
                             if (isset($_SESSION["registrado"])){
-                                echo "<div class='col-8 text-center'>
+                                echo "<div class='col-8 col-lg-8 text-center'>
                                     <button type='button' class='btn btn-secondary btn-custom-ingresado'><a href='../pages/carrito.php' class='link-1'>Ingresár</a></button>
                                 </div>
                                 <div class='col-md-4 col-lg-4'></div>";
@@ -57,7 +57,7 @@ session_start();
                            
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <div class="container-index">
-                                <br><br>
+                                
                                 <h4 class="text-muted"> ¡Bienvenido a Carrito de Compra!<br>       Tu destino número uno para equiparte y disfrutar del deporte al aire libre.</h4>
                                 <p>En Carrito de Compra, nos apasiona la vida activa y al aire libre. Entendemos que cada aventura, desde una caminata tranquila en el parque hasta una intensa sesión de entrenamiento, requiere el equipo adecuado para sacar lo mejor de ti. Es por eso que nos dedicamos a ofrecerte una amplia variedad de productos de alta calidad, diseñados para mejorar tu experiencia y ayudarte a alcanzar tus metas.</p>
                                 </div>

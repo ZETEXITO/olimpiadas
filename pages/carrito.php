@@ -51,7 +51,7 @@ $_SESSION["stock"] = $stock;
         </div>
     </div>
     </div>
-    <b p-2r>
+    <br>
     <img class="Img-Carrito p-2" src="../assets/images/airelibre1.jpg">
 
     <div class="Container-Carrito">
