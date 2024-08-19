@@ -8,8 +8,11 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/stylesloginregister.css">
 </head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+<body >
+    <?php include "../includes/navbar.php"?>
+    <div class=" d-flex justify-content-center align-items-center vh-100">
     <div class="container bg-dark text-light p-4 rounded shadow" style="max-width: 400px;">
+        <div class="row">
         <div class="text-center mb-4">
             <img src="../assets/images/carrito.png" alt="Carrito" width="72" height="72">
             <h1 class="h3 mb-4">Iniciar sesión</h1>
@@ -25,9 +28,11 @@
             </div>
             <button type="submit" class="btn btn-dark w-100 mb-3">Ingresar</button>
             <div class="text-center">
-                <a href="registro.php" class="text-light">¿No tienes cuenta? ¡Regístrate aquí!</a>
+                <a href="register.php" class="text-light">¿No tienes cuenta? ¡Regístrate aquí!</a>
+            </div>
             </div>
         </form>
+    </div>
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

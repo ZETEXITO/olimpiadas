@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="../assets/css/stylesloginregister.css">
 
 </head>
-<body class="bg-light d-flex justify-content-center align-items-center vh-100">
+<body>
+<?php include "../includes/navbar.php"?>
+    <div class=" d-flex justify-content-center align-items-center vh-100">
     <div class="container bg-dark text-light p-4 rounded shadow" style="max-width: 400px;">
         <div class="text-center mb-4">
             <img src="../assets/images/carrito.png" alt="Carrito" width="72" height="72">
@@ -37,6 +39,8 @@
                 <a href="login.php" class="text-light">¿Ya tienes cuenta? ¡Inicia sesión aquí!</a>
             </div>
         </form>
+        </div>
+    </div>
     </div>
     <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
 </body>

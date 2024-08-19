@@ -31,7 +31,7 @@
                             </div>
                             <div class="col-lg-12 col-sm-12 col-12 text-center">
                                 <br>
-                                <button type="button" class="btn btn-outline-dark">Continuar como invitado</button>
+                                <button type="button" class="btn btn-outline-dark"><a href="hola.php" class="link-2">Continuar como invitado</a></button>
                             </div>
                             <div class="col-lg-12 col-sm-12 col-12">
                                 <br><br>
