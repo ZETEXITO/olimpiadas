@@ -58,7 +58,7 @@ $_SESSION["stock"] = $stock;
         <div class="row">
             <div class="col-2 text-center"><a class="banner-links">Uniforme</a></div>
             <div class="col-2 text-center"><a class="banner-links">Pelotas</a></div>
-            <div class="col-2 text-center"><a class="banner-links">Botines</a></div>
+            <div class="col-2 text-center"><a class="banner-links">Zapatillas</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>
             <div class="col-2 text-center"><a class="banner-links">ASD</a></div>

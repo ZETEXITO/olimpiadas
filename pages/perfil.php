@@ -46,7 +46,16 @@ $id = $_SESSION["IdUsuario"];
             \n";
                 }
             ?>
-        </div>
+            </div>
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3">
+                <a class="btn btn-secondary btn-custom-ingresado"  href="editar-perfil.php">Editar Perfil</a>
+            </div>
+            <div class="col-lg-3">
+            </div>
+            <div class="col-lg-3">
+            </div>
     </div>
 </div>
 
