@@ -49,7 +49,10 @@ $_SESSION["stock"] = $stock;
         echo "<br><br><br><br><div class='col-12 text-center'><a href='../pages/ingresoproducto.php'><button type='button' class='btn btn-secondary btn-custom-ingresado'>Ingresar Producto</button></a></div><br><br>";
     }
     ?>
-    <div class="Container-Carrito"> 
+    <div class="col-lg-12 text-center">
+        <h1>Stock de Productos</h1>
+    </div>
+    <div class="Container-Carrito">
         <div id="carouselExampleIndicators" class="carousel slide Container-Carrito-Carrousel pt-3" data-bs-ride="carousel">
             <div class="carousel-inner text-center">
                 <div class="carousel-item active ">
@@ -65,38 +68,34 @@ $_SESSION["stock"] = $stock;
                                 $DescP = 0;
                                 $ValórP = 0;
                                 if($stock != 0){
-                                    while ($Repet < $stock){
-                                        $Random = RandomIdStock( 1, $stock );
-                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Imagen_Producto, Nombre_Producto, Descripcion, Valor_Producto FROM productos WHERE ID_Producto = ". $Random."") or die (mysqli_error($conn));
+                                        $query1 = mysqli_query($conn, "SELECT * FROM productos") or die (mysqli_error($conn));
                                         while($row1= mysqli_fetch_array($query1)){
                                             $IDP = $row1['ID_Producto'];
                                             $NombreP = $row1['Nombre_Producto'];
                                             $ImagenP = $row1['Imagen_Producto'];
-                                            $DescP = $row1['Descripcion'];
-                                            $ValórP = $row1['Valor_Producto'];
-                                        }
-                                        $ContRepet++;
-                                        if ($ContRepet == 6) {
-                                            $ContRepet = 0;
-                                            echo "</div>
-                                                </div> 
-                                            </div>
-                                            <div class='carousel-item'>
-                                                <div class='col-12'>
-                                                    <div class='row'>";
-                                        }else{
-                                       echo"<div class='col-2  p-1'>
-                                                <div class='Container-Carrito-Carrousel-List'>
-                                                    <input type='hidden' value='$IDP'>
-                                                    <img class='Container-Carrito-Carrousel-List-Img' src='$ImagenP'><br>
-                                                    <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
-                                                    <h7 class='Container-Carrito-Carrousel-List-Description'>$DescP</h7>
-                                                    <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
-                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agregar al Carrito</button>
+                                            $ContRepet++;
+                                            if ($ContRepet == 7) {
+                                                $ContRepet = 0;
+                                                echo "</div>
+                                                    </div>
                                                 </div>
-                                            </div>";
+                                                <div class='carousel-item'>
+                                                    <div class='col-12'>
+                                                        <div class='row'>";
+                                            }else{
+                                           echo"<div class='col-2  p-1'>
+                                                    <div class='Container-Carrito-Carrousel-List'>
+                                                        <input type='hidden' value='$IDP'>
+                                                        <img class='Container-Carrito-Carrousel-List-Img' src='$ImagenP'><br>
+                                                        <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
+                                                        <h7 class='Container-Carrito-Carrousel-List-Description'>$DescP</h7>
+                                                        <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
+                                                        <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agragar al Carrito</button>
+                                                    </div>
+                                                </div>";
+                                            }
                                         }
-                                    }
+                                        
                                 }else{
                                     echo "  <br><br>
                                             <div class='container'><h1 class='text-center'>Nos quedamos sin stock o el sistema está teniendo problemas, por favór vuelva a intentar más tarde</h1></div>

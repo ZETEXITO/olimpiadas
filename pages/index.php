@@ -41,16 +41,16 @@ session_start();
                                 <div class='col-md-4 col-lg-4'></div>";
                             }else{
                                 echo"<div class='col-md-4 col-lg-4 text-center'>
-                                <button type='button' class='btn btn-secondary btn-custom'>  <a href='login.php' class='link-1' >Iniciar Sesion</a> </button>
+                                 <a href='login.php' class='btn btn-secondary btn-custom link-1' >Iniciar Sesion</a>
                             </div>
                             <br>
                             <div class='col-md-4 col-lg-4 text-center'>
-                                <button type='button' class='btn btn-secondary btn-custom'> <a href='register.php' class='link-1' >Registrarse</a> </button>
+                                <a href='register.php' class='btn btn-secondary btn-custom link-1' >Registrarse</a> 
                             </div>
                             <div class='col-md-2 col-lg-2'></div>
                             <div class='col-lg-12 col-sm-12 col-12 text-center'>
                                 <br>
-                                <a href='../pages/carrito.php'><button type='button' class='btn btn-outline-dark btn-custom-invitado'>Continuar como invitado</button></a>
+                                <a href='../pages/carrito.php' class='btn btn-outline-dark btn-custom-invitado'>Continuar como invitado</a>
                             </div>";
                             }
                                 ?>
@@ -66,7 +66,7 @@ session_start();
                     </div>
                 </div>
                 
-                <div id="carouselExample" class="col-lg-6 col-sm-6 col-6 p-0 carousel slide carrou-index" data-bs-ride="carousel">
+                <div id="carouselExample" class="col-lg-6 col-sm-6 col-6 p-0 carousel-slide carrou-index" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
                         <img src="../assets/images/pelocesped.jpg" alt="Pelota en césped" class="img-fluid custom-height carrou-index-img">

@@ -5,9 +5,16 @@ $username = "root";
 $password = "";
 $dbname = "olimpiadas";
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+// Definir la función RandomIdStock
+function RandomIdStock($min, $max) {
+    return rand($min, $max);
+}
+
 if (isset($_SESSION["Ingresado"])) {
     $ImagenU = 0;
     $query = mysqli_query($conn,"SELECT Imagen, Admin FROM usuarios WHERE ID_Usuario = ".$_SESSION["IdUsuario"]."") or die (mysqli_error($conn));
@@ -18,6 +25,7 @@ if (isset($_SESSION["Ingresado"])) {
         }
     }
 }
+
 $stock = 0;
 $queryCant = mysqli_query($conn,"SELECT ID_Producto FROM productos");
 while($rowCant = mysqli_fetch_array($queryCant)){
@@ -32,12 +40,12 @@ $_SESSION["stock"] = $stock;
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css"> 
     <script defer src="../bootstrap/js/bootstrap.bundle.js"></script>
-    <script defer src="../bootstrap/js/Main.js"></script>
+    <script src="../assets/js/Main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra</title>
 </head>
-<body> 
-<?php 
+<body>
+<?php
     if (isset($_SESSION["registrado"])){
         include "../includes/navbar-ingresado.php";
     } else{
