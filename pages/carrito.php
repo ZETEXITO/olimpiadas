@@ -84,38 +84,35 @@ $_SESSION["stock"] = $stock;
                                 $DescP = 0;
                                 $ValórP = 0;
                                 if($stock != 0){
-                                    while ($Repet < $stock){
-                                        $Random = RandomIdStock( 1, $stock );
-                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Nombre_Producto,  Valór_Producto FROM productos WHERE ID_Producto = $Random") or die (mysqli_error($conn));
+                                    
+                                       
+                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Nombre_Producto,  Valór_Producto FROM productos ") or die (mysqli_error($conn));
                                         while($row1= mysqli_fetch_array($query1)){
                                             $IDP = $row1['ID_Producto'];
-                                            $NombreP = $row1['Nombre_Producto'];
-
+                                            $NombreP = $row1['Nombre_Producto'];                                          
                                             $ValórP = $row1['Valór_Producto'];
-                                        }
-                                        $ContRepet = $ContRepet + 1;
-                                        if ($ContRepet == 6) {
-                                            $ContRepet = 0;
-                                            echo "</div>
+                                            $ContRepet++;
+                                            if ($ContRepet == 7) {
+                                                $ContRepet = 0;
+                                                echo "</div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class='carousel-item'>
-                                                <div class='col-12'>
-                                                    <div class='row'>";
-                                        }else{
-                                       echo"<div class='col-2  p-1'>
-                                                <div class='Container-Carrito-Carrousel-List'>
-                                                    <input type='hidden' value='$IDP'>
-
-                                                    <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
-
-                                                    <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
-                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agregar al Carrito</button>
-                                                </div>
-                                            </div>";
+                                                <div class='carousel-item'>
+                                                    <div class='col-12'>
+                                                        <div class='row'>";
+                                            }else{
+                                           echo"<div class='col-2  p-1'>
+                                                    <div class='Container-Carrito-Carrousel-List'>
+                                                        <input type='hidden' value='$IDP'>
+                                                        <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
+                                                        <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
+                                                        <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agregar al Carrito</button>
+                                                    </div>
+                                                </div>";
+                                            }
                                         }
                                     }
-                                }else{
+                                else{
                                     echo "  <br><br>
                                             <div class='container'><h1 class='text-center'>Nos quedamos sin stock o el sistema está teniendo problemas, por favór vuelva a intentar más tarde</h1></div>
                                             <br><br><br><br><br><br><br>";
