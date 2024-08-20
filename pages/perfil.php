@@ -5,12 +5,7 @@ $username = "root";
 $password = "";
 $dbname = "olimpiadas";
 $conn = new mysqli($servername, $username, $password, $dbname);
-$id =-1;
-$name ="";
-$app ="";
-$email ="";
-$id1= "";
-$contra="";
+$id = $_SESSION["IdUsuario"];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,13 +27,13 @@ $contra="";
 <br><br><br>
 <div class="container">
     <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-6 div-perfil text-left bg-dark text-white">
             <h1> Nombre de Usuario: </h1><br>
             <h1> Email del Usuario: </h1><br>
         </div>
-        <div class="col-lg-6 text-right bg-dark text-white">
+        <div class="col-lg-6 text-right bg-dark text-white div-perfil">
             <?php
-            $query = mysqli_query($conn, "SELECT * FROM usuarios")
+            $query = mysqli_query($conn, "SELECT * FROM usuarios where ID_Usuario = ".$id."")
             or die (mysqli_error($conn));
             while ($row = mysqli_fetch_array($query)) {
             echo
@@ -47,7 +42,7 @@ $contra="";
             </h1><br>
             <h1>
             {$row['Email']}
-            </h1>
+            </h1><br>
             \n";
                 }
             ?>

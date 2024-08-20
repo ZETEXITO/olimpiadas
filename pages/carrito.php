@@ -5,9 +5,16 @@ $username = "root";
 $password = "";
 $dbname = "olimpiadas";
 $conn = new mysqli($servername, $username, $password, $dbname);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+
+// Definir la función RandomIdStock
+function RandomIdStock($min, $max) {
+    return rand($min, $max);
+}
+
 if (isset($_SESSION["Ingresado"])) {
     $ImagenU = 0;
     $query = mysqli_query($conn,"SELECT Imagen, Admin FROM usuarios WHERE ID_Usuario = ".$_SESSION["IdUsuario"]."") or die (mysqli_error($conn));
@@ -18,6 +25,7 @@ if (isset($_SESSION["Ingresado"])) {
         }
     }
 }
+
 $stock = 0;
 $queryCant = mysqli_query($conn,"SELECT ID_Producto FROM productos");
 while($rowCant = mysqli_fetch_array($queryCant)){
@@ -30,14 +38,14 @@ $_SESSION["stock"] = $stock;
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css"> 
+    <link rel="stylesheet" href="../assets/css/styles.css"> 
     <script defer src="../bootstrap/js/bootstrap.bundle.js"></script>
-    <script defer src="../bootstrap/js/Main.js"></script>
+    <script src="../assets/js/Main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compra</title>
 </head>
-<body> 
-<?php 
+<body>
+<?php
     if (isset($_SESSION["registrado"])){
         include "../includes/navbar-ingresado.php";
     } else{
@@ -78,12 +86,11 @@ $_SESSION["stock"] = $stock;
                                 if($stock != 0){
                                     while ($Repet < $stock){
                                         $Random = RandomIdStock( 1, $stock );
-                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Imagen_Producto, Nombre_Producto, Descripción, Valór_Producto FROM productos WHERE ID_Producto = $Random") or die (mysqli_error($conn));
+                                        $query1 = mysqli_query($conn, "SELECT ID_Producto, Nombre_Producto,  Valór_Producto FROM productos WHERE ID_Producto = $Random") or die (mysqli_error($conn));
                                         while($row1= mysqli_fetch_array($query1)){
                                             $IDP = $row1['ID_Producto'];
                                             $NombreP = $row1['Nombre_Producto'];
-                                            $ImagenP = $row1['Imagen_Producto'];
-                                            $DescP = $row1['Descripción'];
+
                                             $ValórP = $row1['Valór_Producto'];
                                         }
                                         $ContRepet = $ContRepet + 1;
@@ -99,11 +106,11 @@ $_SESSION["stock"] = $stock;
                                        echo"<div class='col-2  p-1'>
                                                 <div class='Container-Carrito-Carrousel-List'>
                                                     <input type='hidden' value='$IDP'>
-                                                    <img class='Container-Carrito-Carrousel-List-Img' src='$ImagenP'><br>
+
                                                     <h5 class='Container-Carrito-Carrousel-List-Title'>$NombreP</h5><br>
-                                                    <h7 class='Container-Carrito-Carrousel-List-Description'>$DescP</h7>
+
                                                     <p class='Container-Carrito-Carrousel-List-Valor'>$ValórP</p>
-                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agragar al Carrito</button>
+                                                    <button class='Container-Carrito-Carrousel-List-Button' onclick='ContP($IDP)'>Agregar al Carrito</button>
                                                 </div>
                                             </div>";
                                         }
