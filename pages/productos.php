@@ -46,7 +46,7 @@ $_SESSION["stock"] = $stock;
         include "../includes/navbar.php";
     }
     if (isset($_SESSION["Admin"]) && $_SESSION["Admin"] != 0){
-        echo "<br><br><div class='col-12 text-center'><button type='button' class='btn btn-secondary btn-custom-ingresado'>Ingresar Producto</button></div><br><br>";
+        echo "<br><br><br><br><div class='col-12 text-center'><a href='../pages/ingresoproducto.php'><button type='button' class='btn btn-secondary btn-custom-ingresado'>Ingresar Producto</button></a></div><br><br>";
     }
     ?>
     <div class="Container-Carrito"> 
